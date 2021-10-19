@@ -28,6 +28,7 @@ function Server() {
     }
     console.log(isEmpty);
     setTask("");
+    setTaskCount(taskCount);
   };
 
   const deleteTask = () => {
@@ -36,7 +37,7 @@ function Server() {
 
   function addserver(e) {
     serverCount.push(<AddServer act={deleteTask} />);
-    setCountServer(...serverCount);
+    setCountServer(serverCount);
     console.log(serverCount);
   }
 
@@ -60,22 +61,24 @@ function Server() {
       {/* tasks */}
       <div id="task" className="p-2">
         <h1>task</h1>
-        {taskCount.length === 0
-          ? null
-          : taskCount.map((data, i) => {
-              return (
-                <div id="add-task" className="d-flex flex-row">
-                  {data}
-                  <i
-                    className="fas fa-trash-alt p-2"
-                    onClick={() => {
-                      console.log(i + " task deleted");
-                      taskCount.splice(i, 1);
-                    }}
-                  />
-                </div>
-              );
-            })}
+        {taskCount.length === 0 ? (
+          <p>no task</p>
+        ) : (
+          taskCount.map((data, i) => {
+            return (
+              <div id="add-task" className="d-flex flex-row" key={i}>
+                {data}
+                <i
+                  className="fas fa-trash-alt p-2"
+                  onClick={() => {
+                    console.log(i + " task deleted");
+                    taskCount.splice(i, 1);
+                  }}
+                />
+              </div>
+            );
+          })
+        )}
       </div>
       {/* action */}
       <div className="p-2">
