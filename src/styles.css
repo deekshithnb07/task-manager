@@ -1,0 +1,34 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.complete-task {
+  margin: 20px;
+  height: 60px;
+  width: 200%;
+  border: solid #bd04bd 3px;
+}
+
+#servers {
+  width: 100%;
+}
+
+#add-task {
+  color: black;
+  border: solid 2px blue;
+  width: 100%;
+  margin: auto;
+  display: inline-block;
+}
+
+#ad-ta {
+  margin-top: 5px;
+}
+
+button {
+  border-style: none;
+  border: solid black 2px;
+  margin: 5px;
+  background-color: #8b78d1;
+  padding: 5px;
+}
