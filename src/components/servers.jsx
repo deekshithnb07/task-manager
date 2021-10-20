@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Action from "./action";
 import { AddServer, AddTask } from "./otherComp";
+import Task from "./tasks";
 export default Server;
 
 function Server() {
@@ -31,7 +32,7 @@ function Server() {
   useEffect(() => {
     console.log("changed");
     eff();
-  }, []);
+  }, [Task, Action, setCountServer, setServerCount, setTaskCount]);
 
   // on adding tasks
   const addTask = (e) => {
@@ -86,16 +87,7 @@ function Server() {
       </div>
 
       {/* tasks */}
-      <div id="task" className="p-2">
-        <h1>task</h1>
-        {taskCount.length === 0 ? (
-          <p>you can add tasks for your servre</p>
-        ) : (
-          taskCount.map((data, i) => {
-            return <div className="d-flex flex-row">{data}</div>;
-          })
-        )}
-      </div>
+      <Task taskCount={taskCount} />
 
       {/* action */}
       <Action
