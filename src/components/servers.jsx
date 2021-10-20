@@ -1,24 +1,45 @@
 import React, { useEffect, useState } from "react";
+import Action from "./action";
+import { AddServer, AddTask } from "./otherComp";
 export default Server;
 
 function Server() {
   const [countServer, setCountServer] = useState(0);
   const [task, setTask] = useState("");
-  const [serverCount, setServerCount] = useState([<AddServer />]);
+  const [serverCount, setServerCount] = useState([
+    { server: <AddServer />, task: false }
+  ]);
   const [taskCount, setTaskCount] = useState([]);
-  const [isEmpty, setEmpty] = useState(false);
+  const [isEmpty, setEmpty] = useState(true);
 
+  //on changing task number
   const handleTask = (e) => {
     const a = e.target.value;
     setTask(a);
+    setTaskCount(taskCount);
     console.log(a);
   };
 
+  //effecting on servercount
+  function eff() {
+    let a = serverCount.length;
+    setCountServer(a + 1);
+    console.log(countServer);
+  }
+
+  //useeffect hook
+  useEffect(() => {
+    console.log("changed");
+    eff();
+  }, []);
+
+  // on adding tasks
   const addTask = (e) => {
     const n = task;
     console.log(n);
     for (let i = 0; i < n; i++) {
-      taskCount.push(<AddTask />);
+      let k = taskCount.length;
+      taskCount.push(<AddTask k={k} arr={taskCount} set={setTaskCount} />);
     }
     console.log(taskCount);
     if (taskCount.length === 0) {
@@ -28,22 +49,24 @@ function Server() {
     }
     console.log(isEmpty);
     setTask("");
-    setTaskCount(taskCount);
   };
 
-  const deleteTask = () => {
-    console.log("delete");
-  };
-
+  // on adding server
   function addserver(e) {
-    serverCount.push(<AddServer act={deleteTask} />);
-    setCountServer(serverCount);
+    serverCount.push({
+      server: <AddServer />,
+      task: false
+    });
+    setServerCount(serverCount);
+    eff();
     console.log(serverCount);
   }
 
+  // on deleting server
   function removeServer(e) {
-    setCountServer(`${serverCount.pop()}`);
-    // serverCount.pop();
+    serverCount.pop();
+    setServerCount(serverCount);
+    eff();
     console.log(serverCount);
   }
 
@@ -53,58 +76,35 @@ function Server() {
       <div id="server" className="p-2">
         <h1>server</h1>
         {serverCount.length === 0
-          ? serverCount.push(<AddServer />)
+          ? serverCount.push({
+              server: <AddServer />,
+              task: false
+            })
           : serverCount.map((data, i) => {
-              return data;
+              return data.server;
             })}
       </div>
+
       {/* tasks */}
       <div id="task" className="p-2">
         <h1>task</h1>
         {taskCount.length === 0 ? (
-          <p>no task</p>
+          <p>you can add tasks for your servre</p>
         ) : (
           taskCount.map((data, i) => {
-            return (
-              <div id="add-task" className="d-flex flex-row" key={i}>
-                {data}
-                <i
-                  className="fas fa-trash-alt p-2"
-                  onClick={() => {
-                    console.log(i + " task deleted");
-                    taskCount.splice(i, 1);
-                  }}
-                />
-              </div>
-            );
+            return <div className="d-flex flex-row">{data}</div>;
           })
         )}
       </div>
+
       {/* action */}
-      <div className="p-2">
-        <h1>Action</h1>
-        <button onClick={addserver}>add server</button>
-        <button onClick={removeServer}>remove server</button>
-        <h3>server to be removed {countServer.length}</h3>
-        <input type="number" value={task} onChange={handleTask} />
-        <button onClick={addTask}>add tasks</button>
-      </div>
-    </div>
-  );
-}
-
-function AddServer() {
-  return (
-    <div className="complete-task">
-      <span></span>
-    </div>
-  );
-}
-
-function AddTask() {
-  return (
-    <div className="d-flex flex-row" id="ad-ta">
-      <p className="p-2">waiting...</p>
+      <Action
+        addserver={addserver}
+        removeServer={removeServer}
+        task={task}
+        handleTask={handleTask}
+        addTask={addTask}
+      />
     </div>
   );
 }

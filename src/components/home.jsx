@@ -1,7 +1,7 @@
 import React from "react";
 import Server from "./servers";
-import Task from "./task";
-import Action from "./action";
+// import Task from "./task";
+// import Action from "./action";
 export default Home;
 
 function Home() {

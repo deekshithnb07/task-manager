@@ -2,30 +2,52 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+/* server bar */
 .complete-task {
   margin: 20px;
   height: 60px;
-  width: 200%;
+  width: 90%;
   border: solid #bd04bd 3px;
 }
 
+/* all the display content */
 #servers {
   width: 100%;
 }
 
+#server {
+  width: 30%;
+  height: 100%;
+}
+
+#task {
+  width: 30%;
+  height: 100%;
+}
+
+#action {
+  width: 40%;
+  height: 100%;
+}
+
+/* Addtask comp */
 #add-task {
   color: black;
   border: solid 2px blue;
-  width: 100%;
-  margin: auto;
+  width: 80%;
+  margin-top: 10px;
   display: inline-block;
 }
 
-#ad-ta {
-  margin-top: 5px;
+/* input number */
+.tsk {
+  border: solid black 2px;
+  height: 35px;
 }
 
-button {
+/* button */
+.bt {
   border-style: none;
   border: solid black 2px;
   margin: 5px;
