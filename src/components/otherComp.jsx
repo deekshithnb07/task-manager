@@ -17,7 +17,11 @@ function AddTask(props) {
       ) : (
         <p className="p-2"> processing... </p>
       )}
-      <i className="fas fa-trash-alt p-2" onClick={props.delete} />
+      <I onClick={props.delete} />
     </div>
   );
+}
+
+export function I() {
+  return <i className="fas fa-trash-alt p-2" />;
 }

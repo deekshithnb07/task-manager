@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Action from "./action";
-import { AddServer, AddTask } from "./otherComp";
+import { AddServer, AddTask, I } from "./otherComp";
 import Task from "./tasks";
 export default Server;
 
@@ -54,7 +54,19 @@ function Server() {
     for (let i = 0; i < n; i++) {
       let k = taskCount.length;
       taskCount.push({
-        task: <AddTask delete={deleteTask} wait={taskWait} />,
+        task: (
+          <div
+            className="d-flex justify-content-between text-center"
+            id="add-task"
+          >
+            {taskWait ? (
+              <p className="p-2">waiting...</p>
+            ) : (
+              <p className="p-2"> processing... </p>
+            )}
+            <i className="fas fa-trash-alt p-2" onClick={deleteTask} />
+          </div>
+        ),
         waiting: true
       });
     }
