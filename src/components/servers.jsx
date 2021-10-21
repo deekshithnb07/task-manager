@@ -12,6 +12,7 @@ function Server() {
   ]);
   const [taskCount, setTaskCount] = useState([]);
   const [isEmpty, setEmpty] = useState(true);
+  const [taskWait, setTaskWait] = useState(true);
 
   //on changing task number
   const handleTask = (e) => {
@@ -21,6 +22,7 @@ function Server() {
     console.log(a);
   };
 
+  // asunc function
   async function test() {
     for (const er of taskCount) {
       console.log(er);
@@ -34,6 +36,11 @@ function Server() {
     console.log(countServer);
   }
 
+  function deleteTask(e) {
+    console.log(" task deleted");
+    // taskCount.splice(1, 1);
+    setTaskCount(taskCount);
+  }
   //useeffect hook
   useEffect(() => {
     console.log("changed");
@@ -46,7 +53,10 @@ function Server() {
     console.log(n);
     for (let i = 0; i < n; i++) {
       let k = taskCount.length;
-      taskCount.push(<AddTask k={k} arr={taskCount} set={setTaskCount} />);
+      taskCount.push({
+        task: <AddTask delete={deleteTask} wait={taskWait} />,
+        waiting: true
+      });
     }
     console.log(taskCount);
     if (taskCount.length === 0) {
@@ -93,7 +103,7 @@ function Server() {
       </div>
 
       {/* tasks */}
-      <Task taskCount={taskCount} />
+      <Task task={taskCount} />
 
       {/* action */}
       <Action

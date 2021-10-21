@@ -12,15 +12,12 @@ function AddServer() {
 function AddTask(props) {
   return (
     <div className="d-flex justify-content-between text-center" id="add-task">
-      <p className="p-2">waiting...</p>
-      <i
-        className="fas fa-trash-alt p-2"
-        onClick={() => {
-          console.log(props.k + " task deleted");
-          props.arr.splice(props.k, 1);
-          props.set = props.arr;
-        }}
-      />
+      {props.wait ? (
+        <p className="p-2">waiting...</p>
+      ) : (
+        <p className="p-2"> processing... </p>
+      )}
+      <i className="fas fa-trash-alt p-2" onClick={props.delete} />
     </div>
   );
 }
