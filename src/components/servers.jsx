@@ -21,6 +21,12 @@ function Server() {
     console.log(a);
   };
 
+  async function test() {
+    for (const er of taskCount) {
+      console.log(er);
+    }
+  }
+
   //effecting on servercount
   function eff() {
     let a = serverCount.length;
@@ -32,7 +38,7 @@ function Server() {
   useEffect(() => {
     console.log("changed");
     eff();
-  }, [Task, Action, setCountServer, setServerCount, setTaskCount]);
+  }, [Task, Action, setCountServer, setServerCount, setTaskCount, test]);
 
   // on adding tasks
   const addTask = (e) => {
