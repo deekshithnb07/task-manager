@@ -1,0 +1,304 @@
+<html>
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Poiret+One);
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Helvetica';
+    }
+    
+    .left {
+        float: left;
+    }
+    
+    li {
+        text-align: center;
+    }
+    
+    ul {
+        /* list-style-type: none; */
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    
+    h1,
+    h2,
+    p,
+    div,
+    h4,
+    blockquote,
+    h3,
+    li,
+    navbar {
+        font-family: 'Poiret One', cursive;
+    }
+    
+    section {
+        width: 70%;
+        margin-left: 200px;
+    }
+    
+    #navbar {
+        overflow: hidden;
+        width: 25vw;
+        height: 100%;
+        position: fixed;
+        background-color: rgba(43, 150, 182, 0.33);
+        top: 0;
+        left: 0;
+        z-index: 499;
+        position: fixed;
+        /*
+    width: 30%;*/
+        left: 0;
+    }
+    
+    #primary_nav {
+        top: 0px;
+        position: fixed;
+        display: block;
+        left: -115px;
+        width: 170px;
+        height: 100%;
+        background: rgba(43, 150, 182, .33);
+        z-index: 500;
+    }
+    
+    #primary_nav ul {
+        display: block;
+        margin-top: 80px;
+        padding-left: 5px;
+        list-style: none;
+    }
+    
+    #primary_nav ul li a {
+        display: block;
+        padding: 0 0 25px 20px;
+        color: #FFF;
+        font-weight: bold;
+        font-size: 15px;
+        text-decoration: none;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        -ms-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+    }
+    
+    #primary_nav ul li a:hover,
+    #primary_nav ul li a:active {
+        color: #434244;
+        padding-left: 17px;
+        text-decoration: none;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        -ms-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+    }
+    
+    #mobile_nav {
+        font-size: 36px;
+        position: relative;
+        display: inline-block;
+        top: 10px;
+        left: 127px;
+        color: #FFF;
+        text-decoration: none;
+        z-index: 1000;
+    }
+    
+    #mobile_nav:hover {
+        color: #434244;
+    }
+    
+    @media only screen and (max-width: 815px) {
+        /* For mobile phones: */
+        #sidebar ul {
+            border: 1px solid;
+            height: 207px;
+        }
+        #sidebar {
+            background-color: white;
+            position: absolute;
+            top: 0px;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            max-height: 275px;
+            border: none;
+            z-index: 1;
+            border-bottom: 2px solid;
+        }
+        #mainDoc {
+            position: relative;
+            margin-left: 0px;
+            margin-top: 270px;
+        }
+    }
+    
+    .navbar {
+        position: fixed;
+        background-color: rgba(43, 150, 182, 0.33);
+    }
+</style>
+
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <input type="checkbox" id="nav-hamburger">
+    <label for="nav-hamburger" class="button--hamburger">	&#9776;</label>
+
+    <nav id="navbar" class="navbar">
+        <header>
+            <h1> My Family - The Awesome People That Love Me </h1>
+        </header>
+        <div class="link-container">
+            <ul>
+                <li><a class="nav-link" href="#Intro" onclick="hideNav()">Intro</a></li>
+                <li><a class="nav-link" href="#Ma" onclick="hideNav()">Ma</a></li>
+                <li><a class="nav-link" href="#Liyah" onclick="hideNav()">Liyah</a></li>
+                <li><a class="nav-link" href="#Romeo" onclick="hideNav()">Romeo</a></li>
+                <li><a class="nav-link" href="#Me" onclick="hideNav()">Me</a></li>
+                <li><a class="nav-link" href="#Butch" onclick="hideNav()">Butch</a></li>
+                <li><a class="nav-link" href="#Conclusion" onclick="hideNav()">Conclusion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="Intro">
+            <header>
+                <h2>Intro</h2>
+            </header>
+            <p>My Family are great<span class="highlight">They love me and I love them.</span> This is a list of my immediate family members: </p>
+        </section>
+        <section class="main-section" id="Ma">
+            <header>
+                <h2>Ma</h2>
+            </header>
+            <p>I love her, and I like to hug her a lot. She says she doesn't like my hugs, but I know she does. Here are a few things I like about her: </p>
+            <ul class="left">
+                <li class="left">Her hair</li><br />
+                <li class="left">Her smile</li><br />
+                <li class="left">Her love for learning</li><br />
+                <li class="left">Her taste in TV shows</li><br />
+                <li class="left">And everything else about her</li><br />
+            </ul><br />
+        </section>
+        <br />
+        <br />
+        <br />
+        <br />
+        <section class="main-section left" id="Liyah">
+            <header>
+                <h2>Liyah</h2>
+            </header>
+            <p> Liyah is my sister. Sometimes she can be really bossy, but I still love her. She's kinda wierd. Sometimes she busts out laughing from the most craziest stuff.
+                <p>
+                    <p>My sister is trying to get one of the most boring-est jobs - insurance. She trying ot study for a life and health insurance license. She already passed her adjustors exam, and her Property and Casualty insurance exam. Not long ago,
+                        she went for an interview and signed a contract for a life and health insurance job that pays you based on how much insurance you sell.</p>
+
+                    <p>Although she can be annoying, I really have fun with her at times. She says and thinks about the most craziest things. I wonder how she comes up with some things she says.</p>
+
+        </section>
+        <section class="main-section" id="Romeo">
+            <header>
+                <h2>Romeo</h2>
+            </header>
+            <p>Next off is my brother. he's currently 16, almost 17. There isn't much to say about him. He's fine when he's on his computer and is totally zoned out. When he isn't on his computer, he's usually driving, on his phone, listening to music, or
+                annoying me and my sister. He is like the clown of the family. He always tries to annoy us.</p>
+        </section>
+        <section class="main-section" id="Me">
+            <header>
+                <h2>Me</h2>
+            </header>
+            <p>Yay! It's time to talk about me! You'll love hearing about me and my accomplishments - and I'm only twelve and going into seventh grade.</p>
+            <h4>My Talents</h4>
+            <p>I'm very talented. I took chear once, play tennis(recreationally), run(recreationally), and fight(mma and boxing). I also code. I know a lot of css and html, but I still have things to learn also. I'm trying to learn javascipt. I know some
+                python, but I kind of left off in the middle of learning it to start learning html, css, and javascript. I love reading. I mainly read fiction. My lexile is in a 11/12 grade level. It's exactly 1298. I love to make and design things. I
+                also love to learn. I have also been told that I have great leadership skills. I was nominated four times to go to a summer camp for youth leadership. Every time, I politely turned them down due to expenses. I am also apart of the L.I.F.E.
+                program at my school. It's a program for gifted students. I have been attending L.I.F.E. since third grade..</p>
+            <h4>Education & Awards</h4>
+            <p> Currently, I'm a student at Jefferson County Middle School. Last school year(sixth grade), I recieved a 4.0 gpa, distinguished honor roll, excellent student in coding/technology(I found their block coding easy), highest average in all my academics,
+                and 1100+ lexile. In the years before that, I attended Louisville Academy. In fifth grade there, I recieved Distinguished Honor Roll, and Second Highest Average. That previous year, I recieved Highest Average, Distinguished Honor Roll,
+                and First Place in my county's writing contest(Jefferson County Writing Contest).</p>
+            <p>To conclude my section of this documentation, I'll tell you that I haven't been working on all of these things. My main priority this summer is learning to code. Since my mother has introduced me to sources to learn coding, I've found a great
+                interest in it. I loved designing pages and making programs that would help help with everyday things. If you want to learn more about the projects that I've done, <a href="https://codepen.io/BrookTheBook/full/YzwwRvx">click here</a></p>
+        </section>
+        <section class="main-section" id="Butch">
+            <header>
+                <h2>Butch</h2>
+            </header>
+            <p>Finally, we're talking about Butch.</p>
+            <p>Let me first tell you a little something about Butch that you'll never believe - HE'S A DOG! *mocks a look of surprise*</p>
+            <p>Well, it's not that unbelievable, but still - I had you didn't I? Don't lie. Okay, Okay, let me tell you about Butch.</p>
+            <p>Butch is a mixed dog(kinda like me and my siblings). He's a mix of husky and pitbull. He has a light golden coat and regular golden eyes. He doesn't look like a pitbull or a husky that much. He is playful and loves attention. Oh, and also,
+                the first time I went to walk him, I lost my balance and he started dragging me by his leash. Then, he started trying to lick me and get on me. He's a somewhat big dog. Last year, he was about as tall as me when he stood up.</p>
+            <p>Me and my siblings take turns walking him(every once in a while) and feeding him(every day). We keep him in a pen in our back yard and drop him food from over the fence. Every so often when his water gets bucket gets low, we refill it with
+                hose water. Sometimes, I run back and fort with him while he's in his pen and I'm outside of it.</p>
+            <p>You might think we're bad people for caging him and putting him outside, but if he was in the house, he'd mess up everything. he'd be jumping on the table, the couch, our beds, and the counters. He might even mess up the tv or one of our computers.</p>
+            <p>All in all, Butch is apart of our family, too, and we love him even thoug he's a dog.</p>
+        </section>
+        <section class="main-section" id="Conclusion">
+            <header>
+                <h2>Conclusion</h2>
+            </header>
+            <p>Sometimes if things don't work like you'd hoped, you can always go back to your family.</p>
+            <pre><code>
+      if(music!= help){
+        try(you + family);
+      }
+     </code></pre>
+            <h3> Looking to the situation</h3>
+            <p>The situation can also limit what can be done, but it's helpful to have family there to guide you.</p>
+            <pre><code>
+      if (inPublic == true){
+        try(StayingCloseToFamily);
+      }
+     </code></pre>
+
+            <h3>Learning</h3>
+            <p>I think learning can come through trying random lovely things and with time focusing on what seems to work best in different situations. If you want it to be more fun, try to include your family with you. This:</p>
+            <pre><code>
+    try(lovelyArray[random]);
+    </code></pre>
+            <p>Becomes something like:</p>
+            <pre><code>
+    try(lovelyArray[2]);
+    </code></pre>
+
+            <h3>Being OK</h3>
+            <p>Let's be real. Sometimes, things still suck. Reach out for help if you need. If you don't need help, remember this phrase I like "A bad day is not a bad life". It's ok not to always be ok. Maybe just talk to someone close to you, like a friend
+                or family member.</p>
+
+            <pre><code>
+    if alone and (feelBetter == false){
+    return youreStillGood;
+    return to Family;
+    }
+    </code></pre>
+            <h5><a href="https://repl.it/@TLawson1/FCC-Technical-Documentation-Page#index.html"><u>My Code</u></a></h5>
+        </section>
+    </main>
+    <script>
+        document.getElementById("nav-hamburger").checked = true;
+
+        function hideNav() {
+            document.getElementById("nav-hamburger").checked = false;
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
