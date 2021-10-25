@@ -1,0 +1,63 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  /* server bar */
+  .complete-task {
+    text-align: center;
+    margin: 20px;
+    height: 60px;
+    width: 300%;
+    border: solid #bd04bd 3px;
+  }
+  
+  /* all the display content */
+  #servers {
+    width: 100%;
+  }
+  
+  #server {
+    width: 30%;
+    height: 100%;
+  }
+  
+  #tasks {
+    width: 30%;
+    height: 100%;
+  }
+  
+  #action {
+    width: 40%;
+    height: 100%;
+  }
+  
+  /* Addtask comp */
+  #add-task {
+    color: black;
+    border: solid 2px blue;
+    width: 80%;
+    margin-top: 10px;
+    height: 35px;
+    display: inline-block;
+  }
+  
+  /* input number */
+  .tsk {
+    border: solid black 2px;
+    height: 35px;
+  }
+  
+  .justify-content-center{
+    text-align: center;
+  }
+
+  /* button */
+  .bt {
+    border-style: none;
+    border: solid black 2px;
+    margin: 5px;
+    background-color: #8b78d1;
+    padding: 5px;
+  }
+  
