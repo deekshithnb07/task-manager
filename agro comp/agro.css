@@ -1,0 +1,17 @@
+#header {
+    background-color: green;
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
+
+.navbar-nav {
+    display: inline;
+    padding: 10px;
+    color: black;
+    align-content: flex-end;
+}
+
+#flu {
+    flex: center;
+}

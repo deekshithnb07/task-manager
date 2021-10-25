@@ -1,0 +1,97 @@
+/* navigation elements */
+
+.nav-item {
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-item:hover {
+    padding: 10px;
+    font-size: 25px;
+}
+
+.nav-link {
+    color: black;
+    list-style: none;
+}
+
+#nav {
+    position: fixed;
+    width: 100%;
+    background-color: blueviolet;
+    margin-top: 0%;
+}
+
+.nav {
+    display: flex;
+    margin: 0;
+}
+
+
+/* about viewport */
+
+#about {
+    text-align: center;
+    background-color: rgb(173, 143, 221);
+    width: 100%;
+    height: 100%;
+    padding: 20% 0;
+}
+
+@media (max-width: 600px) {
+    #about {
+        padding: 30%;
+    }
+}
+
+
+/* projects section */
+
+#work {
+    background-color: cornsilk;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding: 2% 1%;
+}
+
+.col-lg-4 {
+    display: flex;
+    padding: 1%;
+}
+
+.work {
+    padding: 5%;
+    background-color: darkgray;
+    border-radius: 8%;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* contact section */
+
+#Contact {
+    background-color: blanchedalmond;
+    text-align: center;
+    padding: 5%;
+}
+
+i {
+    padding: 3%;
+    text-shadow: black;
+}
+
+i:hover {
+    color: rgb(146, 5, 5);
+}

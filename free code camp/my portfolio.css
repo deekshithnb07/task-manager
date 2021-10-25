@@ -1,0 +1,168 @@
+body {
+    text-decoration: none;
+    font-family: 'Overpass', sans-serif;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    text-decoration: none;
+    text-shadow: 0 0 3px;
+}
+
+body {
+    position: absolute;
+    margin: 12px 0 0 0;
+    flex: center;
+    background-position: left right;
+    background: linear-gradient(to right, white 0%, rgb(187, 187, 187) 100%);
+}
+
+@media screen {
+    (min-height: 1025px) {
+        #welcome-section {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+#profile-link {
+    padding: 5%;
+}
+
+@media screen {
+    (min-height: 1025px) {
+        #projects {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+
+/* to set fix for viewport */
+
+@media (min-width: 1025px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    font-size: 3em;
+    color: purple;
+}
+
+.project-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    font-size: 3em;
+}
+
+#project-section a {
+    display: grid;
+    padding: 50px;
+}
+
+@media (max-width: 30.625em) {
+    .projects-section {
+        padding: 6rem 1rem;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover
+}
+
+p {
+    color: black;
+    font-size: 20px;
+    display: block;
+}
+
+h3 {
+    font-family: 'Overpass', sans-serif;
+    color: rgb(204, 3, 204);
+}
+
+h1 {
+    font-family: 'Overpass', sans-serif;
+    font-size: 2.5em;
+}
+
+#navbar {
+    text-decoration: none;
+    position: fixed;
+    background-color: purple;
+    margin: 0;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    width: 100%;
+    line-height: 20px;
+    font-size: 40px;
+}
+
+#navbar ul {
+    list-style: none;
+    float: right;
+    display: block;
+}
+
+#navbar li {
+    display: inline;
+    padding: 20px 30px 20px 30px;
+    color: rgb(255, 64, 214);
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Overpass', sans-serif;
+    margin-right: 20px;
+}
+
+#navbar li:hover {
+    background: linear-gradient(to right, rgba(216, 253, 253, 0.829) 0%, rgb(157, 253, 253)100%);
+    font: #020812;
+    font-size: 45px;
+    border-top-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    border-top: 20px blanchedalmond;
+    border-width: 80%;
+    padding: 12px;
+    box-shadow: 0 0 10px black;
+    border-top-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+}
+
+#name {
+    font-size: 3em;
+}
+
+#contact {
+    font-size: 2em;
+}
+
+i {
+    color: purple;
+    text-shadow: 0 0 10px;
+}
+
+footer {
+    font-size: 3em;
+    padding: 50px 0 50px 0;
+}

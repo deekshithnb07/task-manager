@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <link rel="stylesheet"
+    href="./index.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>job tasker</title>
+    <script type="text/javascript" src="./index.js"></script>
+
+</head>
+<body>
+    <div class="row justify-content-center">
+    <div id="servers" class="col justify-content-center">
+       <h1>Server</h1> 
+       <div id="server">
+        <h2 class="complete-task">no server available</h2>  
+       </div>
+    </div>
+    <div id="tasks" class="col justify-content-center">
+        <h1>Task</h1>
+        <div id="task"></div>
+    </div>
+    <div class="col justify-content-center" id="action">
+        <h1>Action</h1>
+        <button class="bt" onclick="addServer()" >
+          add server
+        </button>
+        <button class="bt" onclick="removeServer()">
+          remove server
+        </button>
+        <h3>server to be removed  </h3>
+        <input
+          class="tsk"
+          type="number"
+          value={props.task}
+          onchange="handleTask(this.value)"
+          min="1"
+        />
+        <button class="bt" type="submit" onclick="addTask()">
+          add tasks
+        </button>
+      </div>
+    </div>
+</body>
+</html>

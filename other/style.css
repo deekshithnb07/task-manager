@@ -1,0 +1,22 @@
+#body {
+    background: #ffa80762;
+}
+
+#logo {
+    align-items: center;
+    width: 250px;
+}
+
+a {
+    font-family: "Lucida Console", Monaco, monospace;
+    text-decoration: none;
+    font-size: 42px;
+}
+
+#bg {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}

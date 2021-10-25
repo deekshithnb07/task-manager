@@ -1,0 +1,155 @@
+ @media only screen and (max-width: 600px) {
+     body {
+         background-color: lightblue;
+     }
+ }
+ 
+ .emailform {
+     padding-top: 10em;
+     box-sizing: border-box;
+     width: 100%;
+ }
+ 
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     background-color: #f2f2f2;
+ }
+ 
+ #header {
+     position: fixed;
+     width: 100%;
+     top: 0;
+     left: 0;
+     color: white;
+     font-family: 'Exo 2', sans-serif;
+     padding: 2.5em;
+ }
+ 
+ #header-img {
+     position: fixed;
+     top: 5px;
+     left: 0;
+     height: 50px;
+     width: auto;
+ }
+ 
+ nav#nav-bar ul {
+     display: flex;
+     margin: 0;
+     padding: 0 10px;
+     float: right;
+ }
+ 
+ nav#nav-bar ul li {
+     margin-left: 2rem;
+     margin-right: .5rem;
+     list-style: none;
+ }
+ 
+ nav#nav-bar ul li a {
+     color: #111;
+     display: block;
+     padding: 0 10px;
+     text-decoration: none;
+     text-transform: uppercase;
+     font-weight: bold;
+     font-size: 13px;
+     line-height: 50%;
+ }
+ 
+ ul {
+     list-style: none;
+ }
+ 
+ #email {
+     width: 400px;
+     height: 50px;
+     display: inline;
+     font-size: 20px;
+     background-color: white;
+ }
+ 
+ form,
+ h1 {
+     font-size: 40px;
+ }
+ 
+ #submit {
+     background-color: #04AA6D;
+     color: white;
+     padding: 12px 20px;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+ }
+ 
+ #SUBMIT:hover {
+     border-radius: 5%;
+     background-color: #45a049;
+ }
+ 
+ #HowItWorks {
+     padding: 10%;
+     width: 100%;
+ }
+ 
+ #Features {
+     font-size: 2em;
+     font-weight: 800;
+     padding: 5em 10em 0 10em;
+     width: 100%;
+     margin: 10px;
+     display: flex;
+ }
+ 
+ #Pricing {
+     font-size: large;
+     padding: 1% 10px 1px 15em;
+     display: flex;
+     flex-wrap: nowrap;
+     width: 100%;
+ }
+ 
+ .pricing {
+     border-radius: 1%;
+     border-style: solid;
+     border-width: 2px;
+     width: 80em;
+     margin: 30px;
+     text-align: center;
+     line-height: 60px;
+     font-size: 15px;
+     float: left;
+ }
+ 
+ .price:hover {
+     background-color: rgb(15, 7, 7);
+     border-style: dotted;
+     color: tomato;
+ }
+ 
+ #features>i {
+     float: left;
+     padding-top: 20px;
+ }
+ 
+ #features>h1 {
+     float: right;
+     padding: 2em 5px 5px 5px;
+ }
+ 
+ #features>article {
+     float: right;
+     padding-bottom: 10px;
+ }
+ 
+ #features .fa {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 125px;
+     width: 20vw;
+     color: darkorange;
+ }
